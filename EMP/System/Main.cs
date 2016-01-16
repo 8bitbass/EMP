@@ -12,6 +12,9 @@ namespace EMP
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private Texture2D test;
+        private int temp = 0;
+
         public Main()
         {
             graphics = new GraphicsDeviceManager(this)
@@ -45,6 +48,7 @@ namespace EMP
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            test = Content.Load<Texture2D>("circle");
             // TODO: use this.Content to load your game content here
         }
 
@@ -68,6 +72,9 @@ namespace EMP
                 Exit();
 
             // TODO: Add your update logic here
+            
+            StaticEnemyLifetimeManager.SpawnEnemy(test, new Vector2(100, 100));
+            StaticEnemyLifetimeManager.Update();
 
             base.Update(gameTime);
         }
@@ -79,8 +86,13 @@ namespace EMP
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
             // TODO: Add your drawing code here
+            
+            spriteBatch.Begin();
+
+            StaticEnemyLifetimeManager.Draw(spriteBatch);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
