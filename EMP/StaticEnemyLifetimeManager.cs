@@ -1,0 +1,6 @@
+﻿namespace EMP
+{
+    class StaticEnemyLifetimeManager
+    {
+    }
+}
