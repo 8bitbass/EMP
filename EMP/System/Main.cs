@@ -14,7 +14,12 @@ namespace EMP
 
         public Main()
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this)
+            {
+                PreferredBackBufferWidth = 1280,
+                PreferredBackBufferHeight = 720
+            };
+            graphics.ApplyChanges();
             Content.RootDirectory = "Content";
         }
 
