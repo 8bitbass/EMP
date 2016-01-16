@@ -1,4 +1,3 @@
-﻿namespace EMP
 ﻿using System.Collections.Generic;
 
 namespace EMP
@@ -8,5 +7,9 @@ namespace EMP
         private List<BoringEnemy> activeEnemies;
         private List<BoringEnemy> inactiveEnemies;
 
+        void Update()
+        {
+            
+        }
     }
 }
