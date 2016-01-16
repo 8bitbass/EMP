@@ -44,6 +44,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enemy\BoringEnemy.cs" />
     <Compile Include="System\Main.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="System\Program.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace EMP
 {
-    class Enemy
+    class BoringEnemy
     {
     }
 }
